@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+body{
+    margin:0;
+    padding:0;
+}
+/*ID do menu */
+#principal{ 
+    width:100%;
+    height: 70px;
+    text-align: left;
+    background-color: #303030;
+    font-size:25px;
+    font-weight: 600;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #BABABA;
+    
+}
+    #principal div a{
+        font-family:Inter;
+        font-size: 20px;
+        color:white;
+        text-decoration: none;
+        padding-left: 20px;
+        border-width: 10px;
+    }
+        #principal div a:hover{ /*funciona como um comando para aplicar animação aos botões. Nesse caso, sempre que vc passar o cursorno item, ele ficará azul*/
+            color: blue;
+        }
+    #principal button{
+        font-family:Inter;
+        font-size: 20px;
+        font-weight: 600;
+        color:white;
+        background-color: #0C70F2;
+        margin-right: 5%;
+        height: 40px;
+        width: 80px;
+        border:0;
+        box-shadow: 3px 2px 4px rgba(12, 112, 242, .30);
+        cursor:pointer; /*aplica o cursor em formato de mãozinha quando passar o cursor por cima do botão*/
+                
+    }
+    #menu{
+        display:flex;
+        width:55%;
+        justify-content: space-around; 
+        align-items: center;
+}
