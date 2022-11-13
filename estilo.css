@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+:root{
+    --azul-dnc:#0C70F2;
+    --preto-dnc:#303030;
+    --cinza-dnc:#c9c9c9;
+    --fonte-padrao:'arial';
+}
 body{
     margin:0;
     padding:0;
+    
+    background:linear-gradient(180deg, rgba(12,112,242,0.5) 32%, rgba(12,112,242,0) 45% ),#303030;
+    
+    background-repeat: no-repeat /*permite que o padrão de cor degradê não se repita. Se tiver dúvida, basta desabilitar essa linha e ver como fica*/
 }
 /*ID do menu */
 #principal{ 
     width:100%;
     height: 70px;
     text-align: left;
-    background-color: #303030;
+    background-color: var(--preto-dnc);
     font-size:25px;
-    font-weight: 600;
+    font-weight: 400;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +28,7 @@ body{
     
 }
     #principal div a{
-        font-family:Inter;
+        font-family:var(--fonte-padrao);
         font-size: 20px;
         color:white;
         text-decoration: none;
@@ -26,14 +36,14 @@ body{
         border-width: 10px;
     }
         #principal div a:hover{ /*funciona como um comando para aplicar animação aos botões. Nesse caso, sempre que vc passar o cursorno item, ele ficará azul*/
-            color: blue;
+            color: var(--azul-dnc);
         }
     #principal button{
-        font-family:Inter;
+        font-family:var(--fonte-padrao);
         font-size: 20px;
         font-weight: 600;
         color:white;
-        background-color: #0C70F2;
+        background-color: var(--azul-dnc);
         margin-right: 5%;
         height: 40px;
         width: 80px;
@@ -48,3 +58,92 @@ body{
         justify-content: space-around; 
         align-items: center;
 }
+/*seção principal do site*/
+section{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    
+}
+header{
+    color:white;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    }
+        header h1{
+            font-size: 80px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        header h2{
+            text-align:center; /*altura da janela dessa seção*/
+            font-size:40px;
+            font-weight:700;
+        }
+        header .invert { /*inverte as configuracoes do local onde se aplicou o invert*/
+            background-color: black;
+            font-weight:bold;
+            padding:3px;
+        }
+form{
+    font-family: var(--fonte-padrao);
+    font-size:30px;
+    font-weight:100;
+    width:600px;
+    color:white;   
+   
+    }
+        .form-group{
+            display:flex;
+            flex-direction: column;
+            margin-top:10px;
+            margin-bottom:10px;
+            
+        }
+        
+        form input{
+            border-radius: 10px;
+            border-style: none;
+            height:20px;
+            font-size:20px;
+            background-color: var(--cinza-dnc);
+            padding:10px;
+
+        }
+        
+        form label{
+            margin: 10px 0px 10px 0px
+        }
+        
+        form input:placeholder{  /*pseudo seletores devem ser chamados depois de dois pontos*/
+            color:rgba(57,57,57,0.5);
+        }
+        
+        .checkbox-itens label{
+            font-size:25px;
+        }
+        
+        .checkbox-itens{
+           display:flex;
+           justify-content: space-around;
+           align-items: center;
+        }
+        input[type="checkbox"]{
+            transform: scale(1.7);
+        }
+
+        input[type="submit"]{
+            background-color: rgba(12,112,242,0.9);
+            width:100%;
+            height: 50px;
+            font-size:32px;
+            color:white;
+            margin-top: 50px;
+            box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+            cursor:pointer;
+        }
+
+
