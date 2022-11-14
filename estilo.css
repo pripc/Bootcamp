@@ -145,5 +145,137 @@ form{
             box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
             cursor:pointer;
         }
+        /*Estrutura do rodapé*/
+        footer{
+            margin-top:20px;
+            background-color: #0C70F2;
+            color:white;
+            width:100%;
+            align-items: center;
+        }
+            .infoDNC {
+                margin-top: 30px;
+                display:flex;
+                justify-content: space-around;
+                font-family: var(--fonte-padrao);
+                align-items: center; /*centrallizaos itens na VERTICAL*/
+            }
+            footer ul{
+                list-style: none;  /*Elimina a bolinha dos itens de uma lista*/
+                margin:none; /*eliminando a margem externa da lista que por padrão sempre vem diferente de zero*/
+                padding:0px; /*eliminando a margem interna da lista*/
+                                
+            }
+            footer ul li{  /*Trabalha a lista como um todo*/
+                font-size: 25px;
+                font-family: var(--fonte-padrao);
+                text-align: center;
+                margin: 20px 0px 20px 0px
+                
+            }
+                footer ul li a {
+                    color:white;
+                    text-decoration: none ;
+                    font-weight:600;
+                }
+                footer ul li a:hover{  /*Define parametro que quando passa o mouse sobre o link muda a cora letra pra cinza */
+                    color:gray;
+                }
+            footer nav{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                height:330px;
+
+            }
+            footer nav .destaque p{
+                background-color: var(--preto-dnc);
+                font-size:25px;
+                border-radius: 10px;
+                font-weight:800:800;
+                padding: 0px 10px 0px 10px;
+                margin-bottom:10px;
+            }
+
+            footer .endereco{
+                font-weight:800;
+                font-size:20px;
+                font-family:var(--fonte-padrao);
+                color:white;
+                text-align: center;
+            }
+
+            footer .copyright{
+                height:35px;
+                display:flex;
+                justify-content: center;
+                margin:10px 0px 10px 0px;
+                
+            }
+            footer .copyright a{
+                font-family: var(--fonte-padrao);
+                font-size:20px;
+                font-weight: 600;
+                color:white;
+                text-decoration: none;
+                padding:5px;
+                
+            }
+            footer .copyright a:first-child{ /*seleciona somente o primeiro filho,ou seja, o primeiro elemento*/
+                border-right: 2px solid white;
+            }
+                footer .copyright a:hover{
+                    color:gray
+                }
+    /*AJUSTANDO PARA VISUALIZAÇÃO EM SMARTPHONES*/
+@media only screen and (max-width:600px){
+        /*MENU*/
+        #principal{
+            display:flex;
+            flex-direction: column;
+            height:auto;
+        }
+        #menu{
+            flex-direction: column;
+            width:100%;
+            margin:0px; 
+        }
+            #menu a{
+                display:flex;
+                height:50px;
+                align-items: center;
+            }
+        #principal button{
+            width:100%;
+            margin:0px;
+        }
+       /*ÁREA SECTION*/
+       section h1{
+            font-size:50px;
+       } 
+       section h2{
+            font-size:30px;
+            padding-right:15px;
+            padding-left: 15px;
+       }
+       form{
+            width:100%;
+            font-size:20px;
+       }
+       .checkbox-itens label{
+            font-size:20px;
+        
+        }
+        input[type="checkbox"]{
+            transform: scale(0.9);
+        }
+        footer{
+            width:100%;
+        }
+        footer nav{
+            font-size:15px;
+        }
+}
+
 
 
