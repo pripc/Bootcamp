@@ -269,10 +269,12 @@ form{
         input[type="checkbox"]{
             transform: scale(0.9);
         }
-        footer{
-            width:100%;
+        /*AJUSTANDO FOOTER*/
+        footer .infoDNC{
+            flex-direction: column;
+            font-size:15px;
         }
-        footer nav{
+        footer {
             font-size:15px;
         }
 }
